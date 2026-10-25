@@ -28,7 +28,6 @@ class LocationData(NamedTuple):
   )
 }
 
-# OUTDATED, see below
 # To explain the item code, look at this example
 if (mapNo == 139)
 {
