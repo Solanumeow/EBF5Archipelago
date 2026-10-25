@@ -54,19 +54,15 @@ It will either be chest access code will either be "{mapNo}-{chestNo}-{itemIndex
 '''
 
 '''
-# New LocationData game_id formatting:
-    <item type>-<map id>-<chest id>-<item index>
+# New LocationData game_id formatting for (chests):
+    <mapid>-<chestid>-<itemid>
     where
-        item type -> chest, shop, quest
-        map id -> the number of the room in the mapData file, found in "if(mapNo == X)" at the start of each block
-        chest id -> the number at the end of the name of the chest. Chests in mapData are named "chestX" and you want the X
-        item index -> the index of the item in the chest's array.
+        mapid = the id of the map in mapData
+        chestid = the name of the chest in mapData, e.g. "chest0" (for chests)
+        itemid = the index of the item in the chest in mapData
     so, for the example above,
-    "chest-139-0-0"
+    "map139-chest0-item0"
     would describe the Equips.powerpaw location. This only refers to ONE stack of items in the chest now.
-
-    To convert from the old format to the new, add "chest-" to the front, double check the second number is correct, and change the third to the index of the item in the chest.
-    Also: make sure your numbers are zero-indexed.
 '''
 
 shop_items = {
